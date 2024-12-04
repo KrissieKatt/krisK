@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVP Services - Tech & Design Solutions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #F5E8C7, #D1D7C8, #F0D9FF, #C7E9D3, #E8C3F7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            transition: top 0.3s;
+            z-index: 999;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .navbar a:hover {
+            color: #ff6600;
+        }
+
+        .content {
+            margin-top: 120px;
+            padding: 20px;
+        }
+
+        .intro-section {
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .intro-section h1 {
+            color: #ff6600;
+            font-size: 2.5rem;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .packages {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .package {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            width: 25%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package h2 {
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        .package ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .package li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .package li:before {
+            content: '✓';
+            color: #ff6600;
+            position: absolute;
+            left: 0;
+        }
+
+        .booking-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .booking-button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="branding.html">Branding</a>
+        <a href="mvp.html">MVPs</a>
+        <a href="apps.html">Apps</a>
+        <a href="websites.html">Websites</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="design.html">All Design Needs</a>
+    </div>
+
+    <div class="content">
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <h1>Tech & Design Solutions</h1>
+            <p>We specialize in bringing your vision to life. Our goal is to provide businesses with tech and design solutions that solve real-world problems, enhance your brand, and streamline your operations. Let us help you turn ideas into reality!</p>
+        </div>
+
+        <!-- Packages Section -->
+        <div class="packages">
+            <div class="package">
+                <h2>Basic MVP</h2>
+                <ul>
+                    <li>Core Feature Implementation</li>
+                    <li>Basic UI/UX Design</li>
+                    <li>Rapid Prototyping</li>
+                    <li>Single Platform Support</li>
+                    <li>Basic User Flow</li>
+                </ul>
+                <h3>$5,000 - $10,000</h3>
+            </div>
+
+            <div class="package">
+                <h2>Standard MVP</h2>
+                <ul>
+                    <li>Multiple Core Features</li>
+                    <li>Responsive Design</li>
+                    <li>Advanced Prototyping</li>
+                    <li>Two Platform Support</li>
+                    <li>User Analytics Integration</li>
+                    <li>Basic Backend Support</li>
+                </ul>
+                <h3>$10,000 - $20,000</h3>
+            </div>
+
+            <div class="package">
+                <h2>Premium MVP</h2>
+                <ul>
+                    <li>Complex Feature Set</li>
+                    <li>Custom Design System</li>
+                    <li>Multi-Platform Development</li>
+                    <li>Advanced User Testing</li>
+                    <li>Comprehensive Backend</li>
+                    <li>Scalability Considerations</li>
+                    <li>Full Technical Documentation</li>
+                </ul>
+                <h3>$20,000 - $40,000</h3>
+            </div>
+        </div>
+
+        <!-- Booking Section -->
+        <div class="booking-section">
+            <h2>Ready to Get Started?</h2>
+            <p>Book a consultation with us today and take the first step towards transforming your ideas into successful solutions!</p>
+            <a href="https://calendar.app.google/959PoJKea7THadYg6" class="booking-button" target="_blank">Book Your Appointment</a>
+        </div>
+    </div>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-60px";
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>
